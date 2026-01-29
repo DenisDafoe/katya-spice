@@ -63,15 +63,19 @@ Replace the SVG files in `assets/` or update the image paths in `index.html`:
 Use your own images (PNG/JPG/SVG) and update the `src` attribute.
 
 ### 5) Change wallpaper
-Update the gradient in `styles.css`:
+Replace the wallpaper asset at `assets/nyc-wallpaper.svg` with your own photo (JPG/PNG/SVG), then update the path in `styles.css` if the filename changes:
 
 ```css
 .wallpaper {
-  background: radial-gradient(circle at top, #f3c9ff 0%, #94c7ff 40%, #ffc4b4 100%);
+  background: url("assets/nyc-wallpaper.svg") center/cover no-repeat;
 }
 ```
 
-You can also replace the `::after` texture with a custom image if desired.
+If you swap to a JPG/PNG, keep the same filename or update the `url(...)` accordingly.
+
+### 6) Update folder photos
+The NYC folder uses images at `assets/folder-photo-01.svg`, `assets/folder-photo-02.svg`, and `assets/folder-photo-03.svg`.
+Replace those files (or update the paths in `index.html`) to show your own photos.
 
 ## Structure
 
