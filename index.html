@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Katya Spice — Desktop Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wallpaper"></div>
+  <main class="desktop" aria-label="Desktop">
+    <header class="menubar">
+      <div class="menubar__left">Katya Spice</div>
+      <div class="menubar__right">12:45 · Tue</div>
+    </header>
+
+    <section class="icons" aria-label="Desktop icons">
+      <button class="icon" data-window="about">
+        <span class="icon__image">👩‍💻</span>
+        <span class="icon__label">About</span>
+      </button>
+      <button class="icon" data-window="projects">
+        <span class="icon__image">📁</span>
+        <span class="icon__label">Projects</span>
+      </button>
+      <button class="icon" data-window="gallery">
+        <span class="icon__image">🖼️</span>
+        <span class="icon__label">Gallery</span>
+      </button>
+      <button class="icon" data-window="contact">
+        <span class="icon__image">✉️</span>
+        <span class="icon__label">Contact</span>
+      </button>
+    </section>
+
+    <section class="windows" aria-live="polite">
+      <article class="window" id="window-about" data-window="about" aria-hidden="true">
+        <header class="window__bar">
+          <div class="window__controls">
+            <button class="window__control window__control--close" data-close>
+              <span class="sr-only">Close window</span>
+            </button>
+            <span class="window__control window__control--min"></span>
+            <span class="window__control window__control--max"></span>
+          </div>
+          <h2 class="window__title">About Me</h2>
+        </header>
+        <div class="window__content">
+          <div class="note">
+            <h3>Hi, I'm Katya ✨</h3>
+            <p>
+              A multidisciplinary designer + developer crafting dreamy digital
+              experiences. I love playful interfaces, soft gradients, and
+              macOS-inspired UI layouts.
+            </p>
+            <ul>
+              <li>✨ Based in Kyiv</li>
+              <li>🎧 Focus: Web design &amp; creative coding</li>
+              <li>💡 Open for collaborations</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="window" id="window-projects" data-window="projects" aria-hidden="true">
+        <header class="window__bar">
+          <div class="window__controls">
+            <button class="window__control window__control--close" data-close>
+              <span class="sr-only">Close window</span>
+            </button>
+            <span class="window__control window__control--min"></span>
+            <span class="window__control window__control--max"></span>
+          </div>
+          <h2 class="window__title">Projects</h2>
+        </header>
+        <div class="window__content">
+          <div class="note">
+            <h3>Selected Work</h3>
+            <div class="cards">
+              <article class="card">
+                <h4>Moonlight Journal</h4>
+                <p>Personal journaling web app with mood tracking.</p>
+                <span class="tag">UX/UI</span>
+              </article>
+              <article class="card">
+                <h4>Bloom Studio</h4>
+                <p>Brand identity + site for a flower concept store.</p>
+                <span class="tag">Branding</span>
+              </article>
+              <article class="card">
+                <h4>Soundscape</h4>
+                <p>Immersive music landing page with 3D visuals.</p>
+                <span class="tag">Web Design</span>
+              </article>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="window" id="window-gallery" data-window="gallery" aria-hidden="true">
+        <header class="window__bar">
+          <div class="window__controls">
+            <button class="window__control window__control--close" data-close>
+              <span class="sr-only">Close window</span>
+            </button>
+            <span class="window__control window__control--min"></span>
+            <span class="window__control window__control--max"></span>
+          </div>
+          <h2 class="window__title">Gallery</h2>
+        </header>
+        <div class="window__content">
+          <div class="note">
+            <h3>Studio Moments</h3>
+            <div class="gallery">
+              <figure>
+                <img src="assets/polaroid-01.svg" alt="Polaroid moodboard" />
+                <figcaption>Visual moodboard</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/polaroid-02.svg" alt="Polaroid sketches" />
+                <figcaption>Sketches &amp; drafts</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/polaroid-03.svg" alt="Polaroid workspace" />
+                <figcaption>Workspace vibes</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="window" id="window-contact" data-window="contact" aria-hidden="true">
+        <header class="window__bar">
+          <div class="window__controls">
+            <button class="window__control window__control--close" data-close>
+              <span class="sr-only">Close window</span>
+            </button>
+            <span class="window__control window__control--min"></span>
+            <span class="window__control window__control--max"></span>
+          </div>
+          <h2 class="window__title">Contact</h2>
+        </header>
+        <div class="window__content">
+          <div class="note">
+            <h3>Let's connect</h3>
+            <p>Send me a note or say hi on social media.</p>
+            <div class="links">
+              <a href="mailto:hello@katyaspice.com">hello@katyaspice.com</a>
+              <a href="https://www.behance.net">Behance</a>
+              <a href="https://www.instagram.com">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <nav class="dock" aria-label="Dock">
+      <button class="dock__item" data-window="about">
+        <span>📒</span>
+        <small>Bio</small>
+      </button>
+      <button class="dock__item" data-window="projects">
+        <span>🗂️</span>
+        <small>Work</small>
+      </button>
+      <button class="dock__item" data-window="gallery">
+        <span>🪟</span>
+        <small>Photos</small>
+      </button>
+      <button class="dock__item" data-window="contact">
+        <span>🫧</span>
+        <small>Reach</small>
+      </button>
+    </nav>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
