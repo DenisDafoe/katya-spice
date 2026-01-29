@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="sky1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#152a55" />
+      <stop offset="60%" stop-color="#5a7bd1" />
+      <stop offset="100%" stop-color="#f5c3aa" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#sky1)" />
+  <g fill="#101827">
+    <rect x="40" y="280" width="90" height="260" />
+    <rect x="160" y="320" width="110" height="220" />
+    <rect x="300" y="250" width="80" height="300" />
+    <rect x="410" y="300" width="140" height="250" />
+    <rect x="580" y="240" width="110" height="320" />
+    <rect x="720" y="320" width="120" height="230" />
+  </g>
+</svg>

@@ -27,6 +27,10 @@
         <span class="icon__image">🖼️</span>
         <span class="icon__label">Gallery</span>
       </button>
+      <button class="icon" data-window="folder">
+        <span class="icon__image">📂</span>
+        <span class="icon__label">NYC Folder</span>
+      </button>
       <button class="icon" data-window="contact">
         <span class="icon__image">✉️</span>
         <span class="icon__label">Contact</span>
@@ -129,6 +133,38 @@
         </div>
       </article>
 
+      <article class="window" id="window-folder" data-window="folder" aria-hidden="true">
+        <header class="window__bar">
+          <div class="window__controls">
+            <button class="window__control window__control--close" data-close>
+              <span class="sr-only">Close window</span>
+            </button>
+            <span class="window__control window__control--min"></span>
+            <span class="window__control window__control--max"></span>
+          </div>
+          <h2 class="window__title">NYC Folder</h2>
+        </header>
+        <div class="window__content">
+          <div class="note">
+            <h3>City Snapshots</h3>
+            <div class="folder-grid">
+              <button class="photo-thumb" data-photo="assets/folder-photo-01.svg">
+                <img src="assets/folder-photo-01.svg" alt="NYC skyline at dusk" />
+                <span>Midtown Glow</span>
+              </button>
+              <button class="photo-thumb" data-photo="assets/folder-photo-02.svg">
+                <img src="assets/folder-photo-02.svg" alt="NYC skyline blue hour" />
+                <span>Blue Hour</span>
+              </button>
+              <button class="photo-thumb" data-photo="assets/folder-photo-03.svg">
+                <img src="assets/folder-photo-03.svg" alt="NYC skyline sunset" />
+                <span>Sunset Towers</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <article class="window" id="window-contact" data-window="contact" aria-hidden="true">
         <header class="window__bar">
           <div class="window__controls">
@@ -167,12 +203,21 @@
         <span>🪟</span>
         <small>Photos</small>
       </button>
+      <button class="dock__item" data-window="folder">
+        <span>📂</span>
+        <small>NYC</small>
+      </button>
       <button class="dock__item" data-window="contact">
         <span>🫧</span>
         <small>Reach</small>
       </button>
     </nav>
   </main>
+
+  <div class="lightbox" aria-hidden="true">
+    <button class="lightbox__close" type="button" aria-label="Close photo">×</button>
+    <img class="lightbox__image" alt="" />
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -3,6 +3,10 @@ const triggers = document.querySelectorAll("[data-window]");
 const menuTime = document.querySelector(".menubar__right");
 const iconArea = document.querySelector(".icons");
 const icons = document.querySelectorAll(".icon");
+const photoThumbs = document.querySelectorAll(".photo-thumb");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = document.querySelector(".lightbox__image");
+const lightboxClose = document.querySelector(".lightbox__close");
 let zIndex = 10;
 
 const formatMenubarTime = (date) => {
@@ -76,4 +80,35 @@ placeIconsRandomly();
 setInterval(updateMenubarTime, 60_000);
 window.addEventListener("resize", () => {
   placeIconsRandomly();
+});
+
+const openLightbox = (src, altText) => {
+  if (!lightbox || !lightboxImage) return;
+  lightboxImage.src = src;
+  lightboxImage.alt = altText;
+  lightbox.classList.add("is-open");
+  lightbox.setAttribute("aria-hidden", "false");
+};
+
+const closeLightbox = () => {
+  if (!lightbox || !lightboxImage) return;
+  lightbox.classList.remove("is-open");
+  lightbox.setAttribute("aria-hidden", "true");
+  lightboxImage.src = "";
+  lightboxImage.alt = "";
+};
+
+photoThumbs.forEach((thumb) => {
+  thumb.addEventListener("click", () => {
+    const img = thumb.querySelector("img");
+    if (!img) return;
+    openLightbox(thumb.dataset.photo, img.alt);
+  });
+});
+
+lightboxClose?.addEventListener("click", closeLightbox);
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) {
+    closeLightbox();
+  }
 });
